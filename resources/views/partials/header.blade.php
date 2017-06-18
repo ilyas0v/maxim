@@ -8,21 +8,13 @@
 			<div class="span12">
 				<div id="main-flexslider" class="flexslider">
 					<ul class="slides">
-						<li>
-						<p class="home-slide-content">
-							<strong>creative</strong> and passion
-						</p>
-						</li>
-						<li>
-						<p class="home-slide-content">
-							Eat and drink <strong>design</strong>
-						</p>
-						</li>
-						<li>
-						<p class="home-slide-content">
-							We loves <strong>simplicity</strong>
-						</p>
-						</li>
+						@foreach($slides as $slide)
+							<li>
+							<p class="home-slide-content">
+								{{$slide->cumle}}
+							</p>
+							</li>
+						@endforeach
 					</ul>
 				</div>
 				<!-- end slider -->

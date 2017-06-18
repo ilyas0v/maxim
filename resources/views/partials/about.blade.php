@@ -1,12 +1,12 @@
 <section id="about" class="section">
 <div class="container">
-	<h4>Who We Are</h4>
+	<h4>{{$whoweare->title}}</h4>
 	<div class="row">
 		<div class="span4 offset1">
 			<div>
-				<h2>We live with <strong>creativity</strong></h2>
+				<h2>{{ $whoweare->subtitle }}</h2>
 				<p>
-					Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.
+					{{ $whoweare->text}}
 				</p>
 			</div>
 		</div>
@@ -16,52 +16,21 @@
 			</div>
 		</div>
 	</div>
+
+@php ($n=sizeof($staff))
 	<div class="row">
-		<div class="span2 offset1 flyIn">
+		@for($i=0;$i<$n;$i++)
+		<div class="span2 {{ $i%5==0 ? 'offset1' : '' }} flyIn">
 			<div class="people">
-				<img class="team-thumb img-circle" src="img/team/img-1.jpg" alt="" />
-				<h3>John Doe</h3>
+				<img class="team-thumb img-circle" src="img/team/{{$staff[$i]->image}}" alt="" />
+				<h3>{{$staff[$i]->name_surname}}</h3>
 				<p>
-					Art director
+					{{$staff[$i]->job}}
 				</p>
 			</div>
 		</div>
-		<div class="span2 flyIn">
-			<div class="people">
-				<img class="team-thumb img-circle" src="img/team/img-2.jpg" alt="" />
-				<h3>Mike Doe</h3>
-				<p>
-					Web developer
-				</p>
-			</div>
-		</div>
-		<div class="span2 flyIn">
-			<div class="people">
-				<img class="team-thumb img-circle" src="img/team/img-3.jpg" alt="" />
-				<h3>Neil Doe</h3>
-				<p>
-					Web designer
-				</p>
-			</div>
-		</div>
-		<div class="span2 flyIn">
-			<div class="people">
-				<img class="team-thumb img-circle" src="img/team/img-4.jpg" alt="" />
-				<h3>Mark Joe</h3>
-				<p>
-					UI designer
-				</p>
-			</div>
-		</div>
-		<div class="span2 flyIn">
-			<div class="people">
-				<img class="team-thumb img-circle" src="img/team/img-5.jpg" alt="" />
-				<h3>Stephen B</h3>
-				<p>
-					Digital imaging
-				</p>
-			</div>
-		</div>
+		@endfor
+
 	</div>
 </div>
 <!-- /.container -->

@@ -1,9 +1,9 @@
-<section class="spacer green">
+<section class="spacer green" style="background:{{$spacer1->background}} !important;">
 <div class="container">
 	<div class="row">
 		<div class="span6 alignright flyLeft">
 			<blockquote class="large">
-				 There's huge space beetween creativity and imagination <cite>Mark Simmons, Nett Media</cite>
+				 {{$spacer1->quote}} <cite>{{$spacer1->author}}</cite>
 			</blockquote>
 		</div>
 		<div class="span6 aligncenter flyRight">
