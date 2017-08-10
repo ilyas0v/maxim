@@ -4,9 +4,9 @@
 	<div class="row">
 		<div class="span4 offset1">
 			<div>
-				<h2>{{ $whoweare->subtitle }}</h2>
+				<h2>{{ $whoweare->subtitle ? isset($whoweare) : 'ABOUT' }}</h2>
 				<p>
-					{{ $whoweare->text}}
+					{{ $whoweare->subtitle ? isset($whoweare) : 'euhirithuert ert ertiuherht' }}
 				</p>
 			</div>
 		</div>
